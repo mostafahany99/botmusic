@@ -111,4 +111,10 @@ client.on("message", async (message) => {
     console.error(error);
     message.reply(i18n.__("common.errorCommend")).catch(console.error);
   }
+
 });
+client.on("ready", () => {
+  console.log(`${client.user.username} ready!`);
+  client.user.setActivity(`${PREFIX}help`, { type: "LISTENING" });
+});
+
