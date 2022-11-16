@@ -134,7 +134,7 @@ module.exports = {
 
     try {
       queueConstruct.connection = await channel.join();
-      await queueConstruct.connection.voice.setSelfDeaf(fales);
+      await queueConstruct.connection.voice.setSelfDeaf(false);
       play(queueConstruct.songs[0], message);
     } catch (error) {
       console.error(error);
